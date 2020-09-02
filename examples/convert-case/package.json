@@ -1,5 +1,5 @@
 {
-  "name": "convable",
+  "name": "convert-case",
   "version": "0.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -16,6 +16,7 @@
   "license": "ISC",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "change-case": "^4.1.1"
+    "change-case": "^4.1.1",
+    "convable": "file:../../packages/convable"
   }
 }

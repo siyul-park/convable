@@ -44,6 +44,7 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
-    "convable": "file:packages/convable"
+    "convable": "file:packages/convable",
+    "convert-case": "file:examples/convert-case"
   }
 }
