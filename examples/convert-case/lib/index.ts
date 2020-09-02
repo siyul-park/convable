@@ -17,65 +17,38 @@ import ConvertCaseProcessor from "./convert-case-processor";
 import ArrayConvertProcessor from "./array-convert-processor";
 import DefaultConvertProcessor from "./default-convert-processor";
 
-const convertToCamelCaseProcessor = new ConvertCaseProcessor(camelCase);
-const convertToCapitalCaseProcessor = new ConvertCaseProcessor(capitalCase);
-const convertToConstantCaseProcessor = new ConvertCaseProcessor(constantCase);
-const convertToDotCaseProcessor = new ConvertCaseProcessor(dotCase);
-const convertToHeaderCaseProcessor = new ConvertCaseProcessor(headerCase);
-const convertToNoCaseProcessor = new ConvertCaseProcessor(noCase);
-const convertToParamCaseProcessor = new ConvertCaseProcessor(paramCase);
-const convertToPascalCaseProcessor = new ConvertCaseProcessor(pascalCase);
-const convertToPathCaseProcessor = new ConvertCaseProcessor(pathCase);
-const convertToSentenceCaseProcessor = new ConvertCaseProcessor(sentenceCase);
-const convertToSnakeCaseProcessor = new ConvertCaseProcessor(snakeCase);
-
 const arrayConvertProcess = new ArrayConvertProcessor();
 const defaultConvertProcess = new DefaultConvertProcessor();
 
-function createConverter(
-  convertCaseProcessor: ConvertCaseProcessor
+export function createConverter(
+  convertCase: (name: string) => string
 ): ConvertManager {
   return new ConvertManager()
-    .register(convertCaseProcessor)
+    .register(new ConvertCaseProcessor(convertCase))
     .register(arrayConvertProcess)
     .register(defaultConvertProcess);
 }
 
-export const toCamelCaseConverter = createConverter(
-  convertToCamelCaseProcessor
-);
-export const toCapitalCaseConverter = createConverter(
-  convertToCapitalCaseProcessor
-);
-export const toDotCaseConverter = createConverter(convertToDotCaseProcessor);
-export const toHeaderCaseConverter = createConverter(
-  convertToHeaderCaseProcessor
-);
-export const toNoCaseConverter = createConverter(convertToNoCaseProcessor);
-export const toConstantCaseConverter = createConverter(
-  convertToConstantCaseProcessor
-);
-export const toParamCaseConverter = createConverter(
-  convertToParamCaseProcessor
-);
-export const toPascalCaseConverter = createConverter(
-  convertToPascalCaseProcessor
-);
-export const toPathCaseConverter = createConverter(convertToPathCaseProcessor);
-export const toSentenceCaseConverter = createConverter(
-  convertToSentenceCaseProcessor
-);
-export const toSnakeCaseConverter = createConverter(
-  convertToSnakeCaseProcessor
-);
+export const toCamelCaseConverter = createConverter(camelCase);
+export const toCapitalCaseConverter = createConverter(capitalCase);
+export const toConstantCaseConverter = createConverter(constantCase);
+export const toDotCaseConverter = createConverter(dotCase);
+export const toHeaderCaseConverter = createConverter(headerCase);
+export const toNoCaseConverter = createConverter(noCase);
+export const toParamCaseConverter = createConverter(paramCase);
+export const toPascalCaseConverter = createConverter(pascalCase);
+export const toPathCaseConverter = createConverter(pathCase);
+export const toSentenceCaseConverter = createConverter(sentenceCase);
+export const toSnakeCaseConverter = createConverter(snakeCase);
 
 export default {
+  createConverter,
   toCamelCaseConverter,
   toCapitalCaseConverter,
+  toConstantCaseConverter,
   toDotCaseConverter,
   toHeaderCaseConverter,
   toNoCaseConverter,
-  toConstantCaseConverter,
   toParamCaseConverter,
   toPascalCaseConverter,
   toPathCaseConverter,
