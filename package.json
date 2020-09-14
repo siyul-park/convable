@@ -45,7 +45,6 @@
   },
   "dependencies": {
     "convable": "file:packages/convable",
-    "convable-decorator": "file:packages/convable-decorator",
     "convert-case": "file:examples/convert-case"
   }
 }
