@@ -1,4 +1,4 @@
-interface Converter<M> {
+interface Converter<M = undefined> {
   convert(value: unknown, meta?: M): unknown;
 }
 
