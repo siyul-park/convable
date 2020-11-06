@@ -1,5 +1,5 @@
-interface Converter<M = undefined> {
-  convert(value: unknown, meta?: M): unknown;
+interface Converter {
+  convert(value: unknown): unknown;
 }
 
 export default Converter;
