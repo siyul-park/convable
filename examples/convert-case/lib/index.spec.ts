@@ -1,6 +1,7 @@
 import { toCamelCaseConverter, toSnakeCaseConverter } from "./index";
 
 describe("convert case", () => {
+  const date = new Date();
   const camelCase = {
     thisIsObject: {
       thisIsElement1: 1,
@@ -10,7 +11,7 @@ describe("convert case", () => {
       thisIsArray: [
         {
           thisIsElement4: {
-            thisIsElement5: "test",
+            thisIsElement5: date,
           },
         },
         {
@@ -29,7 +30,7 @@ describe("convert case", () => {
       this_is_array: [
         {
           this_is_element4: {
-            this_is_element5: "test",
+            this_is_element5: date,
           },
         },
         {
