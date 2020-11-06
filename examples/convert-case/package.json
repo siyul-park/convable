@@ -17,6 +17,7 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "change-case": "^4.1.1",
-    "convable": "file:../../packages/convable"
-  }
+    "convable": "^1.0.0-alpha.0"
+  },
+  "gitHead": "2981e739fa9a4e4c19be926e26595eefef3ceef0"
 }
