@@ -1,6 +1,6 @@
 {
   "name": "convert-case",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-beta.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "change-case": "^4.1.1",
-    "convable": "^1.0.0-alpha.0"
+    "convable": "^1.0.0-beta.0"
   },
   "gitHead": "2981e739fa9a4e4c19be926e26595eefef3ceef0"
 }
